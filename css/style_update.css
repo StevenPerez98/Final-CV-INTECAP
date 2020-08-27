@@ -1,0 +1,93 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-image: url("https://c4.wallpaperflare.com/wallpaper/772/718/465/clouds-the-simpsons-figure-background-wallpaper-preview.jpg");
+	/*background-image: url("https://image.freepik.com/free-photo/beautiful-clouds-blue-sky-background_34251-117.jpg");*/
+	background-size: cover;
+}
+
+.update-Box{
+	background-image: url("https://static.vecteezy.com/system/resources/previews/000/668/663/non_2x/abstract-striped-diagonal-yellow-background.jpg");
+	background-size: cover;
+	width: 500px;
+	margin:0 auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	text-align: center;
+	box-shadow: 10px 10px 9px 10px rgba(0,0,0,0.3);
+	border-radius: 20px;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.update-Box h1{
+ 	font-size: 30px;
+ 	font-family: Arial;
+ 	font-weight: bold;
+ 	color: #000;
+ }
+
+.update-Box h2{
+	margin-top: 20px;
+	margin-bottom: 7px;
+	font-size: 18px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #000;
+}
+
+.update-Box button{
+	margin-top: 30px;
+	background-color: #1E90FF;
+	color: #fff;
+	border-radius: 10px;
+	width: 150px;
+	height: 30px;
+	font-size: 15px;
+	font-family: Arial;
+
+}
+
+.datos{
+	width: 80%;
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	border: 1px solid #1f53c5;
+	font-family: calibril;
+	font-size: 16px;
+}
+
+.datos-descripcion{
+	width: 80%;
+	padding: 20px 20px 20px 20px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	margin: 0 0 25px;
+	border: 1px solid #1f53c5;
+	font-family: calibril;
+	font-size: 16px;
+}
+.btn_send{
+	width: 80%;
+	font-size: 20px;
+	font-family: Arial;
+	margin: 15px 0;
+	padding: 12px 24px;
+	color: #fff;
+	background-color: #1f53c5;
+	border-radius: 10px;
+}
+	
+.btn_send:hover{
+ 	cursor: pointer;
+ 	color: #000;
+  	background-color: #f1f1f1;
+ }
