@@ -19,8 +19,8 @@ $user_name = $_SESSION['usuario'];
     $var_apellido = $user['Apellido'];
     $user['profesion'];
     $var_profesion = $user['profesion'];
-    $user['fotoperfin'];
-    $var_foto = $user['fotoperfin'];
+    $user['fotoperfil'];
+    $var_foto = $user['fotoperfil'];
     }
 ?>
 <!DOCTYPE html>

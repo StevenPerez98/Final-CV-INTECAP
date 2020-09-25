@@ -1,8 +1,8 @@
 <?php 
 $server = "localhost";
-$db = "cv";
-$user = "root";
-$password = "";
+$db = "u761333785_intecap";
+$user = "u761333785_jafd";
+$password = ";;bRQHVV";
 
 $conexion_usuario = mysqli_connect($server,$user,$password,$db);
 

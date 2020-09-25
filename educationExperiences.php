@@ -7,6 +7,7 @@ session_start();
 		header('location: login.php');
 		exit;
 	}
+
 $user_name = $_SESSION['usuario'];
   $datos = $conexion_usuario->query("SELECT * FROM usuario WHERE usuario = '$user_name'");
   while($user = mysqli_fetch_assoc($datos)){ 
@@ -25,7 +26,7 @@ $user_name = $_SESSION['usuario'];
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Languages</title>
+	<title>Education</title>
 	<link rel="stylesheet" type="text/css" href="css/style_table.css">
 	<link rel="icon" type="img/png" href="img/icon2.png">
 	<script src="https://kit.fontawesome.com/be22cdfc56.js" crossorigin="anonymous"></script>
@@ -71,34 +72,39 @@ $user_name = $_SESSION['usuario'];
 		</div>
 
 		<div class="item contenido">
-			<h1 >Languages</h1>
+			<h1>Education</h1>
 		 	<table>
-		 		<tr>
-		 			<th>Correlativo</th>
-		 			<th>Languges</th>
-		 			<th>Percent</th>
-		 			<th>Delete</th>
-		 			<th>Update</th>
-		 		</tr>
+		 		<th>Correlativo</th>
+		 		<th>Nombre establecimiendo o curso</th>
+		 		<th>Fecha de incio</th>
+		 		<th>Fecha de cierre</th>
+		 		<th>Descripción</th>
+		 		<th>Delete</th>
+		 		<th>Update</th>
 
-		 		<?php 
-		 			$instruc1 = "SELECT * FROM actividades WHERE tipo = 'l' AND usuario = '$var_id'";
+				<?php 
+		 			$instruc1 = "SELECT * FROM actividades WHERE tipo = 'e' AND usuario = '$var_id'";
 					$query1 = mysqli_query($conexion_usuario,$instruc1);
 
-					while($l = mysqli_fetch_assoc($query1)){
-						echo "<tr><td>".$l['correlativo'].
-							 "</td><td>".$l['titulo'].
-							 "</td><td>".$l['porcentaje'].'%'.
-							 "</td>
+					while($e = mysqli_fetch_assoc($query1)){
+						echo "<tr><td>".$e['correlativo'].
+							 "</td><td>".$e['titulo'].
+							 "</td><td>".$e['fechaInicio'].
+							 "</td><td>".$e['fechaFin'].
+							 "</td><td>".$e['descripcion']."</td>
 
-							 <td><a href='deleteLanguage.php?lenguage=".$l['correlativo']."'><i class='fas fa-trash-alt'></a></td>
+							 <td><a href='deleteEducation.php?educacion=".$e['correlativo']."'><i class='fas fa-trash-alt'></a></td>
 
-							<td><a href='final_updateLanguages.php?lenguage=".$l['correlativo']."&titulo=".$l['titulo']."&porcentaje=".$l['porcentaje']."'><i class='fas fa-edit'></a></td></tr>";
+							<td><a href='final_updateEducation.php?educacion=".$e['correlativo'].
+							"&titulo=".$e['titulo'].
+							"&fechaIngreso=".$e['fechaInicio'].
+							"&fechaFinal=".$e['fechaFin'].
+							"&descripcion=".$e['descripcion']."'><i class='fas fa-edit'></a></td></tr>";
+
 					}
 
 		 		 ?>
 		 	</table>
-		 	
 		</div>
 
 		<div class="item footer">
@@ -121,3 +127,6 @@ $user_name = $_SESSION['usuario'];
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
+
+
+
